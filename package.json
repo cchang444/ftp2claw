@@ -1,0 +1,37 @@
+{
+  "name": "ftp2claw-cli",
+  "version": "1.0.0",
+  "description": "FTP CLI for downloading issue logs (Jira ftp:// links). Agent-friendly.",
+  "type": "module",
+  "bin": {
+    "ftp2claw": "./bin/ftp2claw.js",
+    "f2c": "./bin/ftp2claw.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "skill",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node ./bin/ftp2claw.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "ftp",
+    "cli",
+    "jira",
+    "logs",
+    "agent"
+  ],
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "basic-ftp": "^5.0.5",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0"
+  }
+}
