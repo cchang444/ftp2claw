@@ -196,6 +196,29 @@ Host / user 同样支持 `FTP_HOST` / `FTP_USER`。调试协议可设 `FTP_VERBO
 `ftp://...` 的 Jira 链接仍用 FTPS 连接；只有 `ftps://` 会强制 secure。
 ---
 
+## 在线安装（GitHub Release）
+
+```bash
+npm install -g https://github.com/cchang444/ftp2claw/releases/latest/download/ftp2claw-cli.tgz --prefix "$HOME/.local"
+```
+
+## 发布新版本（维护者）
+
+已配置 GitHub Actions：**推送 `v*` tag 即自动打包并发布 Release**（附带固定名 `ftp2claw-cli.tgz`），无需个人 token。
+
+```bash
+# 1. 改 package.json 的 version
+# 2. 提交后打 tag 并推送
+git commit -am "release: v1.1.0"
+git tag v1.1.0
+git push origin main --tags
+# Actions 会自动跑测试 -> npm pack -> 上传 Release
+```
+
+工作流文件：`.github/workflows/release.yml`
+
+---
+
 ## 卸载
 
 ```bash
